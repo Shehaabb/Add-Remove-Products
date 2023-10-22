@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: monospace;
+}
+
+body {
+  background-color: #e3e3e3;
+}
+
+h1 {
+  font-size: 25px;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  row-gap: 10px;
+  font-size: 18px;
+  width: 60%;
+}
+
+.grid-item {
+  border: 1px solid #b8b8b8;
+  padding: 10px 50px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #e3e3e3;
+  color: black;
+
+}
+.title {
+  background-color: #0c0cb2;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+}
+
+.button {
+  background-color: rgb(199, 8, 8);
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(253, 0, 0, 0.863);
+}
+
+.add {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.add:hover {
+  background-color: rgba(4, 211, 4, 0.863);
+}
+
+.input {
+  text-align: left;
+  padding: 10px 5px;
+  font-size: 15px;
+}
+
+.total {
+  grid-column: 1 / -1;
+}
+
+@media screen and (max-width:426px) {
+
+    .grid-container {
+        transform: scale(0.5);
+        top: 10%;
+        left: 0;
+      }   
+}
+@media screen and (max-width:321px) {
+
+    .grid-container {
+        transform: scale(0.4);
+        top: 10%;
+        left: 0;
+      }   
+}
